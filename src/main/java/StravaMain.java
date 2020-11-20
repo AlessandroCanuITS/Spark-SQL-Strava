@@ -19,7 +19,7 @@ public class StravaMain {
             Dataset<Row> df = spark
                     .read()
                     .option("multiline", "true")
-                    .json("C:/Users/preda/OneDrive/Desktop/Containers/AssignementStrava/dataset/strava_activities.json");
+                    .json("dataset/strava_activities.json");  //it could be necessary to specify the absolute path for the file
 
             df.createOrReplaceTempView("strava_activities");
 
